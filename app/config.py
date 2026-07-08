@@ -15,7 +15,7 @@ def _require(name: str) -> str:
 
 TELEGRAM_BOT_TOKEN = _require("TELEGRAM_BOT_TOKEN")
 DEEPSEEK_API_KEY = _require("DEEPSEEK_API_KEY")
-DATABASE_URL = _require("${{Postgres.DATABASE_URL}}")
+DATABASE_URL = _require("postgresql://postgres:ylmDTxVblgPyjfkuBuguVkmNJNvIeKbZ@hayabusa.proxy.rlwy.net:21038/railway")
 
 # لا قيمة افتراضية لمعرّف الأدمن — درس مستفاد من مراجعة بوت المعهد
 # (كان معرّف الأدمن هناك مكتوباً كقيمة افتراضية في مستودع عام).
