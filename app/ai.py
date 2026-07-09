@@ -44,7 +44,7 @@ def answer_question(user_id: int, question: str, chunks: list[dict]) -> tuple[st
         return NO_ANSWER_MESSAGE, "no_chunks"
 
     results = hybrid_search(question, chunks, top_k=3)
-    if not results or not is_confident_direct_match(results[0]):
+    if not results: # قمنا بإلغاء شرط is_confident_direct_match
         return NO_ANSWER_MESSAGE, "no_answer"
 
     best = results[0]
